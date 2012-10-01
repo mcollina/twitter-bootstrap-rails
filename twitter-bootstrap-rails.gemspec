@@ -23,6 +23,8 @@ Gem::Specification.new do |s|
 
   if (RUBY_PLATFORM == 'java')
     s.add_dependency  'therubyrhino', '~> 1.73.4'
+  elsif (RUBY_PLATFORM =~ /mingw/)
+    # we are on windows, do nothing please
   else
     s.add_dependency  'therubyracer', '>= 0.10.2'
   end
